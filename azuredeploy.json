@@ -107,7 +107,7 @@
     },
     "infranodeVMSize" : {
       "type" : "string",
-      "defaultValue" : "Standard_DS11_v2",
+      "defaultValue" : "Standard_D1_v2",
       "allowedValues" : [
         "Standard_A0",
         "Standard_A1",
