@@ -73,8 +73,7 @@ echo "${RESOURCEGROUP} Bastion Host is starting software update" | mail -s "${RE
 subscription-manager unregister 
 yum -y remove RHEL7
 rm -f /etc/yum.repos.d/rh-cloud.repo
-subscription-manager register --username $RHNUSERNAME --password $RHNPASSWORD
-subscription-manager attach --pool=$RHNPOOLID
+subscription-manager register --username $RHNUSERNAME --password $RHNPASSWORD  --auto-attach --force
 subscription-manager repos --disable="*"
 subscription-manager repos     --enable="rhel-7-server-rpms"     --enable="rhel-7-server-extras-rpms"
 subscription-manager repos     --enable="rhel-7-server-ose-3.3-rpms"
